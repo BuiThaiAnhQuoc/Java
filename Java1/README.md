@@ -89,7 +89,7 @@ switch (day) {
     default:
         System.out.println("Không xác định");
 }
-==>> 수요일
+===>> 수요일
 
 # 반복문 
 switch문은 여러 조건을 비교할 때 if-else문보다 간결하고 읽기 쉬운 구조를 제공합니다.
