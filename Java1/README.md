@@ -1,18 +1,174 @@
-## Getting Started
+부이타이아인꾸옥 (202530136)
+202/10/2
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
 
-## Folder Structure
+2025/09/25 (202530136)
+# 덧셈 연산자
+a += b; 는 a = a + b; 와 같습니다.
+→ 즉, a = 3 + 4 = 7
 
-The workspace contains two folders by default, where:
+System.out.println(b + " / " + a);
+→ b = 4, a = 7 이므로
+출력값은: 4 / 7
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+a -= b; 는 a = a - b; 와 같습니다.
+→ 즉, a = 7 - 4 = 3
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+System.out.println(a + " / " + b);
+→ 출력값은: 3 / 4
+# 비교 연산, 논리 연산
+연산자	의미	예시 (a = 5, b = 3)	  결과
+==	같다 (같은지 비교) a == b	     false
+!=	다르다	          a != b	    true
+>	크다	          a > b	        true
+<	작다	          a < b	        false
+>=	크거나 같다	       a >= b	     true
+<=	작거나 같다	       a <= b	     false
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+# 조건 연사
+a > b 는 조건식입니다.
 
-## Dependency Management
+만약 a 가 b 보다 크면 → a 가 반환됩니다.
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+그렇지 않으면 → b 가 반환됩니다.
+    Java에서 조건 연산자는 ? : 입니다.
+
+이 연산자는 if-else 문을 간단하게 작성할 수 있도록 도와줍니다.
+
+형식: 조건 ? 참일 때의 값 : 거짓일 때의 값
+# 비트 연산 사용되는 경우
+연산자	이름 	     설명	                        예시 (a = 5, b = 3)
+&	비트 AND	    두 비트 모두 1일 때만   1	     a & b → 0101 & 0011 = 0001 (1)
+`	  `	            비트 OR	                      두 비트 중 하나라도 1이면 1
+^	비트 XOR	     두 비트가 다를 때만 1	         a ^ b → 0101 ^ 0011 = 0110 (6)
+~	비트 NOT (보수)	비트를 반전 (0 → 1, 1 → 0)	    ~a → ~0101 = 1010 (-6)
+<<	왼쪽 시프트	     비트를 왼쪽으로 이동 (2배씩 곱함)	a << 1 → 0101 → 1010 (10)
+>>	오른쪽 시프트	 비트를 오른쪽으로 이동 (2로 나눔, 부호 유지)	a >> 1 → 0101 →                                                                 0010 (2)
+>>>	부호 없는 오른쪽 시프트	오른쪽으로 이동 (부호 비트까지 0으로 채움)	a >>> 1 
+→                                                   양수/음수 무관하게 shift
+
+***** 결과
+비트 연산자 = 비트 단위 연산자
+
+0과 1로 이루어진 이진 데이터를 직접 다루기 위해 사용됩니다.
+
+시스템 프로그래밍, 임베디드, 고성능 처리 등에 매우 유용합니다...
+
+# 조건문
+
+조건문은 조건식의 결과(true/false)에 따라 프로그램의 흐름을 제어하는 문장입니다.
+
+주로 if, else if, else, switch 등이 있습니다.
+
+***
+한국어	                영어	                설명
+조건문	        Conditional statement	   조건에 따라 실행되는 문장
+조건식	         Condition	               true 또는 false를 반환하는 식
+참(true)	    True	                   조건이 맞는 경우
+거짓(false)	    False	                   조건이 맞지 않는 경우
+if 문	        if statement	           조건이 참일 때 실행
+else 문	        else statement	           조건이 거짓일 때 실행
+else if 문	    else if statement	       여러 조건을 연속으로 검사
+
+# SWITCH문  
+switch문은 여러 조건을 비교할 때 if-else문보다 간결하고 읽기 쉬운 구조를 제공합니다.
+특히 하나의 변수 값을 여러 경우(case)와 비교할 때 유용합니다.
+
+int day = 3;
+
+switch (day) {
+    case 1:
+        System.out.println("월요일");
+        break;
+    case 2:
+        System.out.println("화요일");
+        break;
+    case 3:
+        System.out.println("수요일");
+        break;
+    default:
+        System.out.println("Không xác định");
+}
+==>> 수요일
+
+# 반복문 
+switch문은 여러 조건을 비교할 때 if-else문보다 간결하고 읽기 쉬운 구조를 제공합니다.
+특히 하나의 변수 값을 여러 경우(case)와 비교할 때 유용합니다.
+
+# WHILE문
+
+**while문**은 **조건이 참(true)**인 동안 계속해서 반복 실행되는 반복문입니다.
+조건이 거짓(false)이 되면 반복을 멈춥니다.
+
+# DO-WHILE문
+do-while문은 조건과 상관없이 무조건 한 번은 실행하고,
+그 이후에 조건을 검사해서 반복을 계속할지 결정하는 반복문입니다.
+
+
+# 중첩 반복
+
+중첩 반복문이란 하나의 반복문 안에 또 다른 반복문을 넣는 것입니다.
+일반적으로 2차원 구조(예: 구구단, 별 찍기 등)를 표현할 때 많이 사용합니다.
+
+
+2025/9/4
+
+
+## HTML에서 `<h1>` ~ `<h6>`
+
+# 글자 크기  
+## 글자 크기
+### 글자 크기
+#### 글자 크기
+##### 글자 크기
+###### 글자 크기
+
+# 문자 강조
+*이탤릭체*  
+**굵은 문자**
+
+수평선
+***
+
+# 리스트 
+* 언오더드 리스트
+* 언오더드 리스트
+* 언오더드 리스트
+    * 언오더드 리스트
+    * 언오더드 리스트
+    * 언오더드 리스트
+        * 언오더드 리스트
+        * 언오더드 리스트
+        * 언오더드 리스트
+
+1. 오더드리스트
+1. 오더드리스트
+1. 오더드리스트
+
+
+``` java
+public class Main {
+    public static void main(String[] args) {
+        System.out.println("Hello World");
+    }
+}
+```
+인라인 코드는 `버튼`이나 코드 조각을 강조할 때 사용
+
+Vs Code에서 터미널을 열려면 `Ctrl` + `~`
+
+
+# 링크
+
+## 외부 링크
+[구글 접속](https://google.com "구글 주소")
+
+## 내부 링크
+[링크 라벨](#markdwon-문법 "markdwon-문법")
+
+# 그림 삽입
+![git 로고](./git.png);
+
+# System.out.println 와 Sytem.out.print는 무엇이 다른가요?
+
+
